@@ -1,7 +1,7 @@
 from pywifi import PyWiFi
 import time
 
-from config.settings import sleepTimeToScanForAvailableNetworks
+import config.settings as cfgs
 
 
 def scan_wifi():
@@ -9,7 +9,7 @@ def scan_wifi():
     iface = wifi.interfaces()[0]  # Get the first wireless interface
     
     iface.scan()  # Start scanning
-    time.sleep(int(sleepTimeToScanForAvailableNetworks))  # Wait for the scan to complete
+    time.sleep(int(cfgs.sleepTimeToScanForAvailableNetworks))  # Wait for the scan to complete
     
     scan_results = iface.scan_results()  # Get scan results
     
