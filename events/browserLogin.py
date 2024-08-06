@@ -15,5 +15,5 @@ def browser_login(address):
     
     # TODO: Fill in the username from the config/credentials.json file in the browser window
 
-    time.sleep(10)
+    time.sleep(cfgs.sleepTimeBeforeBrowserCloses)
     driver.close()
