@@ -14,11 +14,11 @@ def identifying_strongest_router():
         print(f"SSID: {network['ssid']}, BSSID: {network['bssid']}, Signal: {network['signal']}, Auth: {network['auth']}, Cipher: {network['cipher']}")
 
 
-    strongest_band = -9999  # sample lowest value
+    strongest_band = -999  # sample lowest value
 
     # Looping through all the networks to find the strongest network
     for network in networks:
-        if network['signal'] < strongest_band: # Lowest signal number is the strongest signal
+        if network['signal'] > strongest_band: # Lowest signal number is the strongest signal
             strongest_band = network['signal']
     print(strongest_band)  # Prints the strongest wifi signal
 
