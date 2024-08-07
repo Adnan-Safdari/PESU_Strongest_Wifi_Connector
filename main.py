@@ -30,7 +30,7 @@ def identifying_strongest_router():
 
     #TODO: Connect to the fastest wifi access point
 
-identifying_strongest_router()
+# identifying_strongest_router()
 
 
-# browser_login(cfgs.captive_portal_address) # Calling the selenium function and giving it the local ip to login to the portal
+browser_login(cfgs.captive_portal_address) # Calling the selenium function and giving it the local ip to login to the portal

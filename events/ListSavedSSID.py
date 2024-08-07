@@ -9,4 +9,3 @@ def ListPesuSSID():
 
     return data['SSID']
 
-print(ListPesuSSID())
