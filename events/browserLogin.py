@@ -15,6 +15,8 @@ def browser_login(address):
     options = webdriver.EdgeOptions()
     options.add_argument('--ignore-ssl-errors=yes')
     options.add_argument('--ignore-certificate-errors')
+    options.add_argument("--log-level=3")  # 3 for errors, 2 for warnings, 1 for info, 0 for debug
+
 
     driver = webdriver.Edge(options=options)  # Selecting MS Edge browser
 
@@ -37,7 +39,7 @@ def browser_login(address):
     login_button = driver.find_element(By.ID, 'loginbutton')  # Replace with the correct locator
     login_button.click()
 
-    notify.send_notification(title="Login Successfull", message="Successful login at Internet Captive Portal", timeout=1)
+    notify.send_notification(title="Connected to Wifi", message=f"Successfully connected to the fastest router", timeout=1)
 
     time.sleep(cfgs.sleepTimeBeforeBrowserCloses)  # Time before browser closes
     driver.close()

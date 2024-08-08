@@ -21,7 +21,8 @@ def connect_to_wifi(ssid):
 
     if iface.status() == const.IFACE_CONNECTED:
         print(f"Connected to {ssid}")
-        notify.send_notification(title="Connected to Wifi", message=f"Successfully connected to {ssid}", timeout=1)
+        time.sleep(4)
+        # notify.send_notification(title="Connected to Wifi", message=f"Successfully connected to {ssid}", timeout=1)
     else:
         print(f"Failed to connect to {ssid}")
         notify.send_notification(title="Failed to connect to Wifi", message=f"Connection to {ssid} Failed. Please connect manually", timeout=5)

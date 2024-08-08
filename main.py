@@ -22,6 +22,7 @@ def identifying_strongest_router():
     # Looping through all the networks to find the strongest network
     available_pesu_netowrks=[]
     for network in networks:
+        
         if network['ssid'] in ListPesuSSID():
             available_pesu_netowrks.append({"ssid": network['ssid'], "bssid":network['bssid'], "signal":network['signal'], "auth":network['auth'], "cipher": network['cipher']})
     
