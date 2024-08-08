@@ -1,4 +1,4 @@
-comtypes
-pywifi
-selenium
-plyer
+comtypes==1.4.6
+pywifi==1.1.12
+selenium==4.23.1
+plyer==2.1.0
