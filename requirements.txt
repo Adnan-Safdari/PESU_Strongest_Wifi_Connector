@@ -1,3 +1,4 @@
 comtypes
 pywifi
 selenium
+plyer
